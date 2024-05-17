@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/material_dynamic_tertiary95">
+
+        <TextView
+            android:id="@+id/moveToLoIn"
+            android:layout_width="303dp"
+            android:layout_height="41dp"
+            android:background="@color/material_dynamic_tertiary60"
+            android:text=" לחץ אם אתה רשום"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.885" />
+
+        <EditText
+            android:id="@+id/signUpUserName"
+            android:layout_width="242dp"
+            android:layout_height="49dp"
+            android:background="@color/material_dynamic_tertiary60"
+            android:ems="10"
+            android:hint="שם משתמש"
+            android:inputType="text"
+            android:textColorHint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.309" />
+
+        <EditText
+            android:id="@+id/signUpPassword"
+            android:layout_width="242dp"
+            android:layout_height="49dp"
+            android:background="@color/material_dynamic_tertiary60"
+            android:ems="10"
+            android:hint="סיסמה"
+            android:inputType="textPassword"
+            android:textColorHint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpUserName"
+            app:layout_constraintVertical_bias="0.118" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="152dp"
+            android:layout_height="66dp"
+            android:text="לחץ כדי להירשם"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.68" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
