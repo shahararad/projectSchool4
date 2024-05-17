@@ -1,17 +1,21 @@
 package com.example.projectschool;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class WelcomeActivity extends AppCompatActivity implements LogInFragment.LogInListener, SignUpFragment.SignUpListener {
+    public FragmentContainerView fragmentContainerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+        fragmentContainerView= findViewById(R.id.myFragmentContainerView);
         FragmentManager fragmentManager = getSupportFragmentManager();
         LogInFragment logInFragment = new LogInFragment();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -47,4 +51,12 @@ public class WelcomeActivity extends AppCompatActivity implements LogInFragment.
         transaction.commit();
 
     }
+
+    public  void moveAfterLogIn()  {
+        System.out.println("בדיקההההההההההההה");
+        Intent intent = new Intent(this, HomePageActivity.class);
+        startActivity(intent);
+        finish(); // סיוםs של WelcomeActivity כדי למנוע חזרה אליה
+    }
+
 }
