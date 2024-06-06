@@ -20,7 +20,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 
-@Database(entities = {User.class, Ingredients.class, Recipes.class, Recipe_Ingredients.class}, version = 4)
+@Database(entities = {User.class, Ingredients.class, Recipes.class, Recipe_Ingredients.class}, version = 12)
 
 
 
