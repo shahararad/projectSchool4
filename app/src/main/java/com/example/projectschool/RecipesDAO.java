@@ -16,6 +16,8 @@ public interface RecipesDAO {
 
     @Query("SELECT * FROM recipes WHERE name = :name")
     LiveData<Recipes> getRecipeByName(String name);
+    @Query("SELECT id FROM recipes WHERE name = :name")
+    int getIdByName(String name); // - קבלת ה-Id לפי שם
 
     @Insert
     void insertRecipes(Recipes recipe);

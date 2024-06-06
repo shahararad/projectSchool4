@@ -19,6 +19,9 @@ public interface UserDAO {
    // @Query("SELECT * FROM users WHERE username = :username")
    // User getUserByUsernameSync(String username); // פונקציה סינכרונית
 
+    @Query("SELECT * FROM users WHERE username = :username AND password = :password")
+    User getUser(String username, String password);
+
 
     @Insert
     void insertUser(User user);

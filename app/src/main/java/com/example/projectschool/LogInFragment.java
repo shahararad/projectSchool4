@@ -72,6 +72,7 @@ public class LogInFragment extends Fragment {
                 }
 
 
+
                 if(lastCheack(username,pass )){
                     System.out.println("הי עברת את הבדיקה של המשתמש מיד נעביר אקטיביטי");
                     Intent intent = new Intent(getActivity(), HomePageActivity.class);
@@ -96,9 +97,22 @@ public class LogInFragment extends Fragment {
           }
         });
     }
-    private boolean lastCheack (String username,String pass){
 
-        return true;
+
+    private boolean lastCheack (String username,String pass){
+        LiveData<List<User>> allUsers= appDatabase.userDAO().getAllUsers();
+        User user = appDatabase.userDAO().getUser(username,pass);
+        if (user!=null){
+            return true;
+        }
+        else {
+            System.out.println("לא עברת את בדיקת הההתחברות שלי אתה לא קיים לי אצלי!!!!!!!");
+            return false;
+
+        }
+
+
+        // return true;
 
     }
 
